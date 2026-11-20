@@ -1,0 +1,47 @@
+{
+  "name": "data-mask-kit",
+  "version": "1.0.0",
+  "description": "数据脱敏：手机号 / 身份证 / 银行卡 / 姓名 / 邮箱 / 通用字符串（保留首尾、中间打码），零依赖、全 TypeScript",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mask",
+    "desensitize",
+    "privacy",
+    "phone",
+    "idcard",
+    "bankcard",
+    "email",
+    "name",
+    "pii",
+    "typescript"
+  ],
+  "author": "jackiechan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcy-24/data-mask-kit.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
